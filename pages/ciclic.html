@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ciclic</title>
+
+	<link rel="stylesheet" href="css/ciclic.css">
+</head>
+	<body>
+		<div id="index">
+			<header>
+				<div class="header-content">
+					<div class="logo">
+						<a href="#">
+							<span>c</span>i<span>cl</span>i<span>c</span>
+						</a>
+					</div>
+					<div class="nav-bar">
+						<ul>
+							<li><a href="#">Nossos produtos</a></li>
+							<li><a href="#">Quem somos</a></li>
+							<li><a href="#">Perguntas ?</a></li>
+						</ul>
+					</div>
+				</div>
+			</header>
+			
+			<!-- 
+				- diminuir a expessura dos itens do menu e deixar um cinza mais claro
+				- mudar a cor da logo para o background do corpo
+			-->
+			<section>
+				<div id="main-content">
+					<div class="left-content">
+						<div class="title-container">
+							<h1><span>CONTAGEM</span> <span>REGRESSIVA</span> Ciclic</h1>
+						</div>
+					</div>
+
+					<div class="right-content">
+						<div class="data-container">
+							<div class="label">
+								<h2>Juros Compostos</h2>
+								<p>Faça aqui uma simulação de juros compostos</p>
+							</div>
+
+							<form id="form" method="post" action="ciclic2.html">
+								<label for="nome">Nome:</label>
+								<input type="text" id="nome" class="field">
+
+								<label for="mensalidade">Mensalidade: </label>
+								<input type="text" id="mensalidade" class="field money" maxlength="12">
+
+								<label for="tempoComtribuicao">Tempo de contribuição: (em anos)</label>
+								<input type="number" id="tempoContribuicao" class="field" min="1" onkeypress="return somenteNumeros(event);">
+
+								<label for="taxaJuros">Taxa de juros: (ao mês)</label>
+								<input type="text" id="taxaJuros" class="field money">
+							
+								<input type="button" value="Simular" id="btn" class="button" onclick="sendData()">
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer>
+				<!-- Montar footer semelhante ao original -->
+			</footer>
+
+		</div>
+	
+		<script src="js/request.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+		<script>
+			$('.money').mask('#.##0,00', {reverse: true});
+
+			function somenteNumeros(e) {
+				var charCode = e.charCode ? e.charCode : e.keyCode;
+				// charCode 8 = backspace   
+        		// charCode 9 = tab
+        		if (charCode != 8 && charCode != 9) {
+        			// charCode 48 equivale a 0   
+            		// charCode 57 equivale a 9
+            		if (charCode < 48 || charCode > 57) {
+                		return false;
+            		}
+        		}
+			}
+		</script>
+	</body>
+</html>

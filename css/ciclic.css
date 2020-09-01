@@ -1,0 +1,246 @@
+body {
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+#index {
+	width: 100%;
+	height: 100vh;
+	display: block;
+	box-sizing: border-box;
+	background: -webkit-linear-gradient(to bottom, #673af0, #8c3af0);
+	background: linear-gradient(to bottom, #673af0, #8c3af0);
+}
+
+header {
+	width: 100%;
+	height: 80px;
+	background: white;
+	display: flex;
+}
+
+header .header-content {
+	width: 1040px;
+	height: 100%;
+	padding: 0 20px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logo {
+	font-family: helvetica;
+	display: flex;
+	margin-bottom: 5px;
+}
+header .logo a {
+	font-size: 32px;
+	letter-spacing: 1px;
+	font-weight: bold;
+	text-decoration: none;
+	
+	background: -webkit-linear-gradient(to top, #673af0, #8c3af0, #f455aa);
+	background: linear-gradient(to top, #673af0, #8c3af0, #f455aa);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+header .logo a span {
+	font-size: 1.4em;
+}
+
+header .nav-bar {
+	display: flex;
+	height: 50px;
+}
+
+header .nav-bar ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+		
+header .nav-bar li {
+	display: inline-block;
+	float: left;
+	line-height: 50px;
+	margin-left: 15px;
+}
+
+header .nav-bar li a {
+	font-family: sans-serif;
+	text-decoration: none;
+	font-weight: normal;
+	color: black;
+	padding: 5px;
+}
+
+section {
+	width: 100%;
+}
+
+section #main-content {
+	max-width: 1040px;
+	margin: 0 auto;
+	padding: 20px 20px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+section #main-content .left-content {
+	flex: 60%;
+	display: flex;
+	align-items: center;
+}
+
+.title-container {
+	width: 400px;
+	height: 400px;
+	border-top: 25px solid #bceb50;
+	border-left: 25px solid #bceb50; /*#c7f069*/
+	border-radius: 50%;
+	background: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title-container h1 {
+	color: white;
+	font-family: sans-serif;
+	margin-top: 50px;
+	width: auto;
+}
+.title-container h1 span {
+	display: block;
+}
+
+.title-container h1 span:nth-child(1), .title-container h1 span:nth-child(2) {
+	font-size: 2em;
+}
+.title-container h1 span:nth-child(1) {
+	/*cor diferente*/
+} 
+
+.title-container h1 span:nth-child(2) {
+	font-weight: normal;
+}
+
+section #main-content .right-content {
+	font-family: sans-serif;
+	flex: 40%;
+	display: flex;
+	/*padding: 30px;*/
+}
+
+.data-container {
+	width: 100%;
+	padding: 30px;
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0px 4px 35px 2px rgba(150, 150, 150, 0.4);
+}
+
+
+/* Ezpecífico de ciclic2 */
+
+
+#resultBox {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-family: sans-serif;
+}
+
+#resultBox p {
+	font-size: 1.5em;
+	margin: 0 0 20px 0; 
+}
+
+/*#resultBox p span {
+	color: lightgray;
+}*/
+
+
+
+/* FIM do Específico */
+
+
+.label, #form {
+	width: 100%;
+}
+.label {
+	margin-bottom: 32px;
+}
+.label p {
+	margin: 0px;
+	color: #80788a;
+	font-size: 15px;
+}
+.label h2 {
+	font-size: 25px;
+	color: #585061;
+	margin-top: 0px;
+	margin-bottom: 8px;
+}
+#form label, .field {
+	display: block;
+}
+#form label {
+	color: #585061;
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+#form .field {
+	width: calc(100% - 10px);
+	font-size: 14px;
+	color: #80788a;
+	min-height: 2.5em;
+	padding: 0px;
+	padding-left: 10px;
+	outline: none;
+	border-radius: 8px;
+	border: 1px solid darkgray;
+	margin-bottom: 1.75em;
+}
+
+/* botões da 1ª e 2ª pagina */
+#form .button , .right-content #btn {
+	width: 100%;
+	margin-top: 0.85em;
+	padding: 10px 0px;
+	font-size: 15px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: 0px;
+	border-radius: 8px;
+	outline: none;
+	background: #f455aa;
+	cursor: pointer;
+}
+
+/* width: 1080px descer o lado direito */
+
+@media only screen and (max-width: 1080px) {
+	#main-content {
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.data-container {
+		width: 400px;
+	}
+
+	#main-content .right-content, #main-content .left-content {
+		justify-content: center;
+	}
+
+	#main-content .left-content {
+		margin-bottom: 2em;
+	}
+
+	/*criar uma div pai para  .right-content*/
+}
