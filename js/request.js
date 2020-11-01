@@ -85,11 +85,11 @@ function sendHttpRequest( method, url, data ) {
 
 //3º parâmetro refere-se ao objeto json ser enviado no send()
 function getData() {
-	sendHttpRequest( 'GET', 'http://api.mathjs.org/v4/?expr=');
+	sendHttpRequest( 'GET', 'https://api.mathjs.org/v4/?expr=');
 }
 
 function sendData() {
-	sendHttpRequest( 'POST', 'http://api.mathjs.org/v4/', true );
+	sendHttpRequest( 'POST', 'https://api.mathjs.org/v4/', true );
 }
 
 
