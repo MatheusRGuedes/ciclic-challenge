@@ -38,7 +38,7 @@ $(document).ready(function(){
 			textsArray.forEach(addTextToParagrath);
 
 			$(document).on('click', '#btn', function() {
-			    window.location.href = 'ciclic.html';
+			    window.location.href = document.referrer;
 			});
 		});
 	})();
