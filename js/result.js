@@ -38,7 +38,8 @@ $(document).ready(function(){
 			textsArray.forEach(addTextToParagrath);
 
 			$(document).on('click', '#btn', function() {
-			    window.location.href = document.referrer;
+			    //window.location.href = document.referrer;
+			    window.history.go(1);
 			});
 		});
 	})();
