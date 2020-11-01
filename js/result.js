@@ -39,7 +39,7 @@ $(document).ready(function(){
 
 			$(document).on('click', '#btn', function() {
 			    //window.location.href = document.referrer;
-			    window.history.go(1);
+			    window.history.go(-1);
 			});
 		});
 	})();
