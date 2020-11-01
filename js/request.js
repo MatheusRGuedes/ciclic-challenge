@@ -7,7 +7,9 @@ var nome = "",
 
 
 const passValueToNextUrl = function( value ) {
-	window.location = 'http://localhost:3000/ciclic2.html?result=' + value;	
+	//para uso do browserSync  --> http://localhost:3000/ciclic2.html?result=
+	//para o domínio do github --> https://matheusrguedes.github.io/ciclic-challenge/pages/index.html?result=
+	window.location = 'https://matheusrguedes.github.io/ciclic-challenge/pages/index.html?result=' + value;
 };
 
 
